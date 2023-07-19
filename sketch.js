@@ -83,7 +83,8 @@ function setup() {
   button2.size(50,50);
 
  // escreva um bloco de código correto para adicionar um botão para cortar a corda 
-
+ button.mouseClicked(drop);
+  button2.mouseClicked(remove_rope);
   ellipseMode(RADIUS);
 }
 
@@ -112,6 +113,7 @@ function draw()
     World.remove(engine.world,fruit);
     fruit = null;
    //Código para alterar a animação do coelho quando uma colisão for detectada.
+    bunny.changeAnimation('crying',sad)
   }
   
   if(collide(fruit,bubble,40) == true)
